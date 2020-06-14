@@ -2,6 +2,7 @@ import hashlib
 import json
 import re
 import uuid
+import sys
 
 from requests import Session, HTTPError
 from requests.cookies import cookiejar_from_dict
@@ -66,6 +67,9 @@ class NotionClient(object):
         else:
             self._monitor = None
         self._update_user_info()
+
+        print("we are inside malanciault/notion-py")
+        sys.exit()
 
     def start_monitoring(self):
         self._monitor.poll_async()
