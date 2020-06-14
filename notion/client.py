@@ -67,10 +67,7 @@ class NotionClient(object):
         else:
             self._monitor = None
         self._update_user_info()
-
-        print("we are inside malanciault/notion-py")
-        sys.exit()
-
+        
     def start_monitoring(self):
         self._monitor.poll_async()
 
