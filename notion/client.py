@@ -84,7 +84,7 @@ class NotionClient(object):
     def get_record_data(self, table, id, force_refresh=False):
         return self._store.get(table, id, force_refresh=force_refresh)
 
-    def get_block(self, url_or_id, force_refresh=False):
+    def get_block(self, url_or_id, force_refresh=True):
         """
         Retrieve an instance of a subclass of Block that maps to the block/page identified by the URL or ID passed in.
         """
