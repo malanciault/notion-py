@@ -82,7 +82,11 @@ class NotionClient(object):
         records = self._update_user_info()
         return [self.get_block(bid) for bid in records["block"].keys()]
 
-    def get_record_data(self, table, id, force_refresh=False):
+    """
+    Implementing workaround of kevinjalbert
+    https://github.com/jamalex/notion-py/pull/96#pullrequestreview-341617456
+    """
+    def get_record_data(self, table, id, force_refresh=true):
         return self._store.get(table, id, force_refresh=force_refresh)
 
     def get_block(self, url_or_id, force_refresh=True):
