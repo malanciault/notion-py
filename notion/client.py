@@ -86,7 +86,7 @@ class NotionClient(object):
     Implementing workaround of kevinjalbert
     https://github.com/jamalex/notion-py/pull/96#pullrequestreview-341617456
     """
-    def get_record_data(self, table, id, force_refresh=true):
+    def get_record_data(self, table, id, force_refresh=True):
         return self._store.get(table, id, force_refresh=force_refresh)
 
     def get_block(self, url_or_id, force_refresh=True):
